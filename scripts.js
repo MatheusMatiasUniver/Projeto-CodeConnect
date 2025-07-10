@@ -109,3 +109,17 @@ botaoPublicar.addEventListener("click", async (evento) =>{
         alert("Erro ao publicar:", error);
     }
 })
+
+const botaoLimparCampos = document.querySelector(".botao-descartar");
+
+botaoLimparCampos.addEventListener("click", (evento) => {
+    evento.preventDefault();
+
+    const formulario = document.querySelector("form");
+    formulario.reset();
+
+    imagemPrincipal.src = "./img/imagem1.png";
+    textoImagem.textContent = "image_projeto.png";
+
+    listaTags.innerHTML = "";
+})
